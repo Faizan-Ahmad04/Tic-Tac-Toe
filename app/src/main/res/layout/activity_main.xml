@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:layout_marginBottom="27dp"
+        android:fontFamily="cursive"
+        android:text="@string/welcome_to_tic_tac_toe"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="#B53F64"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTurn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="82dp"
+        android:text="@string/_0_s_turn"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#390096"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewGrid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageViewGrid"
+        android:layout_width="323dp"
+        android:layout_height="307dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666"
+        app:srcCompat="@drawable/grid"
+        tools:ignore="ImageContrastCheck" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewGrid"
+        app:layout_constraintEnd_toEndOf="@id/imageViewGrid"
+        app:layout_constraintStart_toStartOf="@id/imageViewGrid"
+        app:layout_constraintTop_toTopOf="@id/imageViewGrid">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/welcome_to_tic_tac_toe"
+                android:onClick="onClickImage"
+                android:padding="20sp"
+                android:tag="0"
+                tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck,ImageContrastCheck,NestedWeights,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/imageView01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/welcome_to_tic_tac_toe"
+                android:onClick="onClickImage"
+                android:padding="20sp"
+                android:tag="1"
+                tools:ignore="ImageContrastCheck,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/welcome_to_tic_tac_toe"
+                android:onClick="onClickImage"
+                android:padding="20sp"
+                android:tag="2"
+                tools:ignore="ImageContrastCheck,UsingOnClickInXml" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/welcome_to_tic_tac_toe"
+                android:onClick="onClickImage"
+                android:padding="20sp"
+                android:tag="3"
+                tools:ignore="ImageContrastCheck,NestedWeights,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/to_do"
+                android:onClick="onClickImage"
+                android:padding="20sp"
+                android:tag="4"
+                tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck,UsingOnClickInXml,DuplicateSpeakableTextCheck" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                android:onClick="onClickImage"
+                android:padding="20sp"
+                android:tag="5"
+                tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck,UsingOnClickInXml" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                android:onClick="onClickImage"
+                android:padding="20sp"
+                android:tag="6"
+                tools:ignore="ImageContrastCheck,ImageContrastCheck,NestedWeights,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                android:onClick="onClickImage"
+                android:padding="20sp"
+                android:tag="7"
+                tools:ignore="ImageContrastCheck,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                android:onClick="onClickImage"
+                android:padding="20sp"
+                android:tag="8"
+                tools:ignore="UsingOnClickInXml,ImageContrastCheck" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="140dp"
+        android:background="#D81B60"
+        android:backgroundTint="#00896E"
+        android:contentDescription="@string/play_again"
+        android:onClick="onClickButton"
+        android:text="@string/play_again_button"
+        android:typeface="normal"
+        app:iconTint="#1BD2D8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewGrid"
+        tools:ignore="UsingOnClickInXml" />
+</androidx.constraintlayout.widget.ConstraintLayout>

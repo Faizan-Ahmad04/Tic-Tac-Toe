@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tic Tac Toe Game</string>
+    <string name="welcome_to_tic_tac_toe">Welcome To Tic Tac Toe</string>
+    <string name="_0_s_turn">0\'s Turn</string>
+    <string name="todo">TODO</string>
+    <string name="play_again">Play Again</string>
+    <string name="to_do">TODO</string>
+    <string name="play_again_button">Play Again</string>
+</resources>
